@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <title>Form Pendaftaran</title>
+        <style>
+            body{
+                font-family: 'Times New Roman', Times, serif;
+                background-color: coral; 
+            }
+            .login {
+                margin: 25px auto;
+                width: 40px;
+                padding: 50px;
+            }
+            form{
+                background-color:rgb(241, 228, 211);
+                padding: 3%;
+                justify-self: start;
+                width: 50%;
+                margin-left: 22%;
+            }
+            header {
+                text-align: center;
+                font-style: oblique;
+                font-size:50px;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-bottom: 1%;
+                color:rgba(11, 13, 129, 0.911);
+                padding-left: 2%;
+                padding-right:2%;
+            }
+            label{
+                font-size: medium;
+            }
+            fieldset{
+                padding: 1%;
+            }
+            legend{
+                font-size: large;
+            }
+            input{
+                background-color:whitesmoke;
+                padding: 4px;
+                border-style:double;
+                margin-bottom: 5%;
+                margin-top: 5%;
+            }
+            input:focus{
+                background: rgb(216, 212, 212);
+            }
+            .input {
+                padding: 8px 0;
+                box-decoration-break: inherit;
+                text-align: center;
+            }
+            h3{
+                text-align: center;
+            }
+            .daftar {
+          background-color: grey;
+          color:black;
+          padding: 16px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 25%;
+          margin-left: 37%;
+          opacity: 0.9;
+        }
+        </style>
+    </head>
+    <body>
+        <header> Pendaftaran Peserta Didik Baru </header>
+        <form action="regist.php" method="POST">
+            <h3><b>Registrasi Siswa</b></h3>
+            <fieldset class="login">
+                <legend>Informasi Akun</legend>
+                <input type="text" name="user" 
+                required autofocus class="input"
+                id="user" placeholder="Username"><br>
+                <input type="password" name="passowrd" class="input"
+                autocomplete="off" required id="password" placeholder="Password"><br>
+            </fieldset>
+
+            <fieldset class="login">
+                <legend>Data Diri</legend>
+                <input type="text" id="nama" 
+                required class="input"
+                name="nama" placeholder="Nama Lengkap"><br>
+                <textarea name="alamat" id="" cols="30" rows="3" class="input"
+                required placeholder="Alamat"></textarea>
+                <input type="text" id="tempat_lahir" 
+                required class="input"
+                name="tempat_lahir" placeholder="Tempat Lahir"><br>
+                <label for="tanggal_lahir">Tanggal Lahir</label><br>
+                <input type="date" id="tanggal_lahir" 
+                required name="tanggal_lahir"><br>
+                <label for="jenis_kel">Jenis Kelamin</label><br>
+                <input type="radio" name="jenis_kel" value="L" checked>Laki-laki <br>
+                <input type="radio" name="jenis_kel" value="P">Perempuan <br>
+                <label for="agama">Agama</label><br>
+                <select name="agama" id="agama">
+                    <option value="islam">Islam</option>
+                    <option value="protestan">Protestan</option>
+                    <option value="katolik">Katolik</option>
+                    <option value="hindu">Hindu</option>
+                    <option value="buddha">buddha</option>
+                    <option value="khonghucu">Khonghucu</option>
+                </select><br>
+                <input type="text" class="input" 
+                required
+                name="negara" id="negara" placeholder="Kewarganegaraan"><br>
+            </fieldset>
+
+            <fieldset class="login">
+                <legend>Data Sekolah</legend>
+                <input type="text" name="asal" 
+                required class="input"
+                id="asal" placeholder="Asal Sekolah"><br>
+                <input type="text" name="nisn" 
+                required class="input"
+                id="nisn" placeholder="NISN"><br>
+                <input type="text" name="ijazah" 
+                required class="input"
+                id="ijazah" placeholder="Nomor Ijazah/SKHUN">
+            </fieldset>
+
+            <fieldset class="login">
+                <legend>Kontak</legend>
+                <input type="text" name="wa" 
+                required 
+                class="input" id="wa" placeholder="Nomor Whatsapp">
+                <input type="email" name="email"
+                required 
+                class="input" placeholder="sample@gmail.com">
+            </fieldset>
+
+            <input type="submit" class="daftar" value="Daftar">
+        </form>
+    </body>
+</html>
