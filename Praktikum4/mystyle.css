@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 15px;
+  font-style: normal;
+}
+
+html {
+  font-size: 60%;
+}
+
+body {
+  background: rgb(230, 228, 228);
+  padding: 60px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Aryaduta_Hotel.JPG/1024px-Aryaduta_Hotel.JPG);
+  background-size: 1789px;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+/* Header */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem 5rem;
+  background-color: grey;
+  text-transform: uppercase;
+}
+
+/* Header Text */
+
+header div h1 {
+  font-size: 25px;
+  text-shadow: 3px 2px 1px lightgrey;
+}
+
+/* Navigation Header */
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav ul li {
+  margin: 0 0.5rem;
+}
+
+nav ul li a {
+  font-size: 1.5rem;
+  color: whitesmoke;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5rem;
+  transition: 0.2s linear;
+}
+
+nav ul li a {
+  background: whitesmoke;
+  color: grey;
+  letter-spacing: 0.5rem;
+}
+
+/* Booking */
+
+label {
+  font-size: medium;
+}
+
+input {
+  background-color: whitesmoke;
+  padding: 2px;
+  border-style: double;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  font-size: 17px;
+  margin-left: 20px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 7px;
+}
+
+input:focus {
+  background: rgb(216, 212, 212);
+}
+
+.flex-container {
+  text-align: center;
+  background: lightgrey;
+  flex-direction: row;
+}
+
+#book-now {
+  cursor: pointer;
+  opacity: 0.9;
+  background-color: yellow;
+  border-radius: 10px;
+  padding: 9px;
+}
+
+/* Home */
+#home {
+  text-align: center;
+  font-size: 50px;
+  color: orange;
+  padding: 30px;
+  margin: 450px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px orangered;
+}
+
+/* Facilities */
+
+#facilities {
+  text-align: center;
+  font-size: 35px;
+  color: rgb(82, 80, 80);
+  padding: 30px;
+  text-transform: uppercase;
+}
+
+.facilities-title {
+  font-weight: bolder;
+  font-size: 20px;
+  margin: 30px;
+  text-transform: uppercase;
+}
+
+.img-source {
+  width: 720px;
+  height: 480px;
+  margin-left: 113px;
+  border-radius: 10px;
+}
+
+/* About */
+
+#about {
+  text-align: center;
+  font-size: 35px;
+  color: rgb(82, 80, 80);
+  padding: 30px;
+  text-transform: uppercase;
+}
+
+#title-center {
+  text-align: center;
+}
+
+.sub-title {
+  margin: 20px;
+  padding: 10px;
+}
+
+.about-h2 {
+  font-size: 20px;
+}
+
+.about-p {
+  font-size: 17px;
+}
+
+/* Contact */
+
+#contact {
+  text-align: center;
+  font-size: 35px;
+  color: rgb(82, 80, 80);
+  padding: 30px;
+  text-transform: uppercase;
+}
+
+#contact-div {
+  text-align: center;
+  max-width: 1100px;
+}
+
+.container {
+  width: 100%;
+  padding: 0 25px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contact-item {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 100px 2%;
+  margin-left: 6%;
+}
+
+.icon {
+  width: 47px;
+  margin-bottom: 15px;
+}
+
+.contact-h3 {
+  line-height: 1em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  height: 50px;
+  padding-right: 20px;
+  line-height: 50px;
+  background: grey;
+  color: rgb(41, 39, 39);
+  margin-top: 20%;
+  text-align: right;
+}
