@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE PICKER</title>
+
+    <style>
+        fieldset {
+            background-color: whitesmoke;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        select {
+            margin-left: 45%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        img {
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function gambar() {
+            let mobil = document.getElementById("GambarMobil").value;
+            let gambar = document.getElementById("gambar");
+
+            if (mobil == "1") {
+                gambar.src = "./gambar/1.png";
+                alert(`${mobil} . Ini Adalah Gambar Jenis Mobil Convertible (Ford Mustang)`);
+            }
+            else if (mobil == "2") {
+                gambar.src = "./gambar/2.png";
+                alert(`${mobil} . Ini Adalah Gambar Jenis Mobil Coupe (Aston Martin DBS)`);
+            }
+            else if (mobil == "3") {
+                gambar.src = "./gambar/3.jpg";
+                alert(`${mobil} . Ini Adalah Gambar Jenis Mobil Hatcback (Dodge Caliber)`);
+            }
+            else if (mobil == "4") {
+                gambar.src = "./gambar/4.jpeg";
+                alert(`${mobil} . Ini Adalah Gambar Jenis Mobil Minivan (Kia Carnival)`);
+            }
+            else if (mobil == "5") {
+                gambar.src = "./gambar/5.jpg";
+                alert(`${mobil} . Ini Adalah Gambar Jenis Mobil Sedan (BMW Seri 7)`);
+            }
+            else if (mobil == "6") {
+                gambar.src = "./gambar/6.jpg";
+                alert(`${mobil} . Ini Adalah Gambar Jenis Sports Car (Bugatti Veyron Super Sport)`);
+            }
+            else if (mobil == "7") {
+                gambar.src = "./gambar/7.jpg";
+                alert(`${mobil} . Ini Adalah Gambar Jenis Sport Vehicle (Ford Explorer)`);
+            }
+            else if (mobil == "8") {
+                gambar.src = "./gambar/8.jpg";
+                alert(`${mobil} . Ini Adalah Gambar Jenis Station Wagon (Honda Accord wagon)`);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset>
+        <h2>Jenis Mobil Berdasarkan Tipenya</h2>
+        <select name="GambarMobil" id="GambarMobil" onchange="gambar()">
+            <option disabled selected> Jenis Mobil </option>
+            <option value="1">Mobil Convertible</option>
+            <option value="2">Mobil Coupe</option>
+            <option value="3">Mobil Hatcback</option>
+            <option value="4">Mobil Minivan</option>
+            <option value="5">Mobil Sedan</option>
+            <option value="6">Sports Car</option>
+            <option value="7">Sport Vehicle</option>
+            <option value="8">Station Wagon</option>
+        </select>
+        <img src="" id="gambar" alt="">
+    </fieldset>
+</body>
+
+</html>

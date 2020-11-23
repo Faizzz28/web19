@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+
+    <script>
+        function kurs() {
+            let input_nilai = document.getElementById("nilai").value;
+            let valas = document.getElementById("valas").value;
+            let hasil_nilai;
+
+            if (valas == "usd") {
+                document.getElementById("hasil").value = "Rp. " + parseFloat(input_nilai) * 9915;
+                hasil_nilai = getElementById("hasil").value;
+                console.log(hasil_nilai);
+            }
+            else if (valas == "sgd") {
+                document.getElementById("hasil").value = "Rp. " + parseFloat(input_nilai) * 13472;
+                hasil_nilai = getElementById("hasil").value;
+                console.log(hasil_nilai);
+            }
+            else if (valas == "myr") {
+                document.getElementById("hasil").value = "Rp. " + parseFloat(input_nilai) * 874;
+                hasil_nilai = getElementById("hasil").value;
+                console.log(hasil_nilai);
+            }
+            else if (valas == "jyp") {
+                document.getElementById("hasil").value = "Rp. " + parseFloat(input_nilai) * 120;
+                hasil_nilai = getElementById("hasil").value;
+                console.log(hasil_nilai);
+            }
+            else if (valas == "eur") {
+                document.getElementById("hasil").value = "Rp. " + parseFloat(input_nilai) * 15888;
+                hasil_nilai = getElementById("hasil").value;
+                console.log(hasil_nilai);
+            }
+            else if (valas == "sar") {
+                document.getElementById("hasil").value = "Rp. " + parseFloat(input_nilai) * 3592;
+                hasil_nilai = getElementById("hasil").value;
+                console.log(hasil_nilai);
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Kurs Rupiah - Mata Uang Asing</legend>
+            <table>
+                <tr>
+                    <th>Masukan Nilai</th>
+                    <th>Valas</th>
+                    <th>Nilai Rupiah (IDR)</th>
+                </tr>
+                <tr>
+                    <td><input id="nilai" type="number" min="0" placeholder="Masukan Mata Uang Asing"></td>
+                    <td><select name="valas" onclick="kurs()" id="valas">
+                            <option value="usd">Dollar US (USD)</option>
+                            <option value="sgd">Dollar Singapore (SGD)</option>
+                            <option value="myr">Ringgit Malaysia (MYR)</option>
+                            <option value="jyp">Yen Jepang (JYP)</option>
+                            <option value="eur">Euro (EUR)</option>
+                            <option value="sar">Riyal Arab Saudi (SAR)</option>
+                        </select></td>
+                    <td><input id="hasil" value="0" type="text" readonly></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>

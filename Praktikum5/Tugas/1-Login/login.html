@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+
+    <style>
+        body {
+            margin: 25%;
+            background-color: antiquewhite;
+        }
+
+        h1 {
+            text-align: center;
+            padding-bottom: 50px;
+            padding-right: 140px;
+        }
+    </style>
+
+    <script>
+        function otentikasi() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username == "ahmad2017" && password == "integrity") {
+                alert("Berhasil Login");
+                return true;
+            }
+            else if (username == "" || password == "") {
+                alert("Masukan Username dan Password Anda");
+                return false;
+            }
+            else {
+                alert("Username atau Password Yang Anda Masukkan Salah");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="index.html" id="Login" onsubmit="otentikasi()">
+        <h1>Form Login</h1>
+        <Label> User Name </Label>
+        <input type="text" name="username" id="username" placeholder="Username" required>
+        <label> Password</label>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <input type="submit" value="submit" onclick="otentikasi()">
+    </form>
+</body>
+
+</html>

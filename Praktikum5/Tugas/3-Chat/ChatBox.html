@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAT BOX</title>
+
+    <style>
+        div.input-chat {
+            margin-left: 80%;
+        }
+
+        fieldset {
+            background-color: whitesmoke;
+        }
+    </style>
+
+    <script>
+        function send() {
+            var letak = document.createElement("P");
+            var chatBaru = document.getElementById("inputPesan").value;
+            console.log(chatBaru);
+            letak.append(chatBaru);
+            document.getElementById("letakPesan").append(letak);
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>ChatBox</legend>
+        <div id="letakPesan">
+        </div>
+        <div class="input-chat">
+            <input type="text" id="inputPesan" value="" />
+            <button onclick=send()>Kirim</button>
+    </fieldset>
+</body>
+
+</html>

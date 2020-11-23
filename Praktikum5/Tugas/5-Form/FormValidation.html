@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION</title>
+
+    <style>
+        body {
+            margin: 5%;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: coral;
+        }
+
+        form {
+            background-color: rgb(241, 228, 211);
+            padding: 3%;
+            justify-self: start;
+            width: 50%;
+            margin-left: 22%;
+        }
+
+        h1 {
+            text-align: center;
+            padding-bottom: 50px;
+            padding-right: 90px;
+        }
+
+        table {
+            margin-left: 25%;
+        }
+
+        td {
+            padding-top: 2%;
+        }
+
+        #submit {
+            margin: 8px 0;
+            cursor: pointer;
+            width: 100%;
+            margin-left: 60%;
+            opacity: 0.9;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function validations() {
+            var nama = document.getElementById("nama").value;
+            var email = document.getElementById("email").value;
+            var berangkat = document.getElementById("berangkat").value;
+            var tujuan = document.getElementById("tujuan").value;
+            var tiket = document.getElementById("tiket").value;
+
+            if (nama != "" && email != "" && berangkat != "" && tujuan != "" && tiket != "") {
+                alert("Berhasil Login");
+                return true;
+            }
+            else if (nama == "" && email == "" && berangkat == "" && tujuan == "" && tiket == "") {
+                alert("Data Yang Anda Masukkan Tidak Lengkap");
+                return true;
+            }
+            else {
+                alert("Data Yang Anda Masukkan Salah");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="index.html" id="form" onsubmit="validations()">
+        <h1>Form Validation</h1>
+        <table>
+            <tr>
+                <td>Nama Pelanggan</td>
+                <td><input type="text" name="nama" id="nama" required></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td>Jam Keberangkatan</td>
+                <td><input type="time" name="berangkat" id="berangkat" min="00:00" max="23:59" required></td>
+            </tr>
+            <tr>
+                <td>Tujuan Keberangkatan</td>
+                <td><input type="text" name="tujuan" id="tujuan" required></td>
+            </tr>
+            <tr>
+                <td>Jumlah Tiket</td>
+                <td><input type="number" name="tiket" id="tiket" min="1" max="10" required></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="submit" id="submit" onclick="validations()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
